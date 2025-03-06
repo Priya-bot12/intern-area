@@ -8,7 +8,7 @@ const path = require('path');
 
 // Middleware
 app.use(cors({
-    origin: 'http://localhost:3000', // Your frontend URL
+    origin: 'https://intern-area-one.vercel.app', // Your frontend URL
     credentials: true
   }));
 app.use(express.json());
