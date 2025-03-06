@@ -40,7 +40,7 @@ function InternDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/internship/${id}`);
+        const response = await axios.get(`https://intern-area.onrender.com/api/internship/${id}`);
         setData(response.data);
         console.log(response.data);
         setCompany(response.data.company);
