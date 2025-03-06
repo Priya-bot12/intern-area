@@ -95,7 +95,7 @@ function InternDetail() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/application", formData, {
+      await axios.post("https://intern-area.onrender.com/api/application", formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
