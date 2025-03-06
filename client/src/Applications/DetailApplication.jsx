@@ -142,7 +142,7 @@ function DetailApplication() {
                   <button
                     onClick={async () => {
                       try {
-                        const response = await fetch(`http://localhost:5000/${data.resumePath}`);
+                        const response = await fetch(`https://intern-area.onrender.com/${data.resumePath}`);
                         const blob = await response.blob();
                         const url = window.URL.createObjectURL(blob);
                         const a = document.createElement("a");
