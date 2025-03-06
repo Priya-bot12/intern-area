@@ -18,7 +18,7 @@ function DetailApplication() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/application/${id}`);
+        const response = await axios.get(`https://intern-area.onrender.com/api/application/${id}`);
         setData(response.data);
       } catch (error) {
         console.error("Error fetching application data:", error);
@@ -31,7 +31,7 @@ function DetailApplication() {
   useEffect(() => {
     const fetchApplicationData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/application/${id}`);
+        const response = await axios.get(`https://intern-area.onrender.com/api/application/${id}`);
         setData(response.data);
   
         if (!response.data?.user) {
@@ -67,7 +67,7 @@ function DetailApplication() {
 
   const handleStatusUpdate = async (id, action) => {
     try {
-      const response = await axios.put(`http://localhost:5000/api/application/${id}`, { action });
+      const response = await axios.put(`https://intern-area.onrender.com/api/application/${id}`, { action });
       setData(response.data.data);
     } catch (error) {
       console.error("Error updating application:", error);
