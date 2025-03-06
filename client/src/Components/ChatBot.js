@@ -30,7 +30,7 @@ const ChatBot = ({ isLoggedIn, userName }) => {
         setMessages(prev => [...prev, newMessage]);
         
         try {
-            const response = await axios.post('http://localhost:5000/api/chatbot/ask', {
+            const response = await axios.post('https://intern-area.onrender.com/api/chatbot/ask', {
                 question: inputMessage,
                 username: userName
             });
