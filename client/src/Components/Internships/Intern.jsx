@@ -17,7 +17,7 @@ function Intern() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/internship');
+        const response = await axios.get('https://intern-area.onrender.com/api/internship');
         setInternData(response.data);
         setFilterInternship(response.data);
         // Calculate max stipend from data
