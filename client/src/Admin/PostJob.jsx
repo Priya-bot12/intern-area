@@ -69,7 +69,7 @@ function PostJOb() {
         }
       });
 
-      await axios.post("http://localhost:5000/api/job", data, {
+      await axios.post("https://intern-area.onrender.com/api/job", data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
