@@ -22,7 +22,7 @@ function Job() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(https://intern-area.onrender.com/api/job');
+                const response = await axios.get('https://intern-area.onrender.com/api/job');
                 setJobData(response.data);
             } catch (error) {
                 console.error("Error fetching job data:", error);
