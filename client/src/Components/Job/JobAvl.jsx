@@ -210,7 +210,7 @@ function JobAvl() {
                 <i className="bi bi-arrow-up-right text-lg"></i> Actively Hiring
               </span>
               <img
-                src={job.logo ? `https://intern-area-one.vercel.app/${job.logo}` : compLogo}
+                src={job.logo ? `https://intern-area.onrender.com/${job.logo}` : compLogo}
                 alt="Company logo"
                 className="company-logo"
               />
