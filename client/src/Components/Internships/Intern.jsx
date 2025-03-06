@@ -156,7 +156,7 @@ function Intern() {
                 <span className="bg-[#e3f2fd] text-[#1976d2] px-4 py-2 rounded-full text-sm flex items-center gap-2">
                   <i className="bi bi-arrow-up-right text-lg"></i> Actively Hiring
                 </span>
-                <img src={data.logo ? `https://intern-area-one.vercel.app//${data.logo}` : compLogo} alt="Company logo" className="company-logo" />
+                <img src={data.logo ? `https://intern-area-one.vercel.app/${data.logo}` : compLogo} alt="Company logo" className="company-logo" />
               </div>
               <div className="card-body">
                 <h3 className="internship-title">{data.title}</h3>
