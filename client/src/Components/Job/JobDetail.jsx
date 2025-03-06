@@ -40,7 +40,7 @@ function JobDetail() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/job/${id}`);
+        const response = await axios.get(`https://intern-area.onrender.com/api/job/${id}`);
         const { company, category } = response.data;
         setCompany(company);
         setCategory(category);
@@ -87,7 +87,7 @@ function JobDetail() {
     }
 
     try {
-      await axios.post("http://localhost:5000/api/application", formData, {
+      await axios.post("https://intern-area.onrender.com/api/application", formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
