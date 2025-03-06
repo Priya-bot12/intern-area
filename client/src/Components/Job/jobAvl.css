@@ -1,0 +1,334 @@
+/* JobAvl.css */
+.job-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  min-height: 100vh;
+  align-items: flex-start; 
+  }
+  
+  .filter-toggle {
+    /* Existing styles */
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 20px;
+    z-index: 999;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    /* Add these */
+    padding: 0;
+    font-size: 1.2rem; /* Control icon size */
+  }
+  
+  /* Add this rule to target the icon specifically */
+  .filter-toggle i {
+    font-size: inherit; /* Inherit from button */
+    margin: 0; /* Remove any default margins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .filter-sidebar {
+  flex: 0 0 280px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: -webkit-sticky; /* For Safari */
+  position: sticky;
+  top: 20px; /* Adjust this value based on your header height */
+  height: calc(100vh - 40px); /* Full height minus top/bottom padding */
+  overflow-y: auto;
+  }
+  
+  .filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-header h3 {
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .close-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+  }
+  
+  .filter-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #444;
+    font-weight: 500;
+  }
+  
+  .filter-group input, .filter-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .jobs-grid {
+    flex: 1;
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .filter-sidebar, .jobs-grid {
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer & Edge */
+}
+
+.filter-sidebar::-webkit-scrollbar, 
+.jobs-grid::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari & Opera */
+}
+  
+  .results-count {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  .job-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+  
+  .card-header {
+    display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  }
+  
+  
+  .company-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+  
+  .job-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .company-name {
+    color: #666;
+    margin-bottom: 0.25rem;
+  }
+  
+  .job-location {
+    color: #888;
+    margin-bottom: 1.5rem;
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  
+  .detail-item i {
+    font-size: 1.25rem;
+    color: #007bff;
+  }
+  
+  .detail-item span {
+    display: block;
+    color: #888;
+    font-size: 0.9rem;
+  }
+  
+  .detail-item p {
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+  }
+  
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+  }
+  
+  .job-type {
+    background: #f8f9fa;
+    color: #666;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+  }
+  
+  .view-details {
+    color: #007bff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    align-items: center; /* Align checkbox and text vertically */
+    gap: 8px; /* Add spacing between checkbox and text */
+  }
+  
+  .checkbox-group input {
+    margin-top:-8px;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .salary-range {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .salary-range input[type="range"] {
+    width: 100%;
+    height: 4px;
+    background: #ddd;
+    border-radius: 2px;
+    outline: none;
+  }
+  
+  .range-values {
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  .clear-all {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .clear-all:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .details-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .job-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .filter-sidebar {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 280px;
+      height: 100vh;
+      z-index: 1000;
+      transition: left 0.3s;
+      padding-top: 3rem;
+    }
+  
+    .filter-sidebar.visible {
+      left: 0;
+    }
+  
+    .filter-toggle {
+      display: block;
+    }
+  
+    .jobs-grid {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .job-card {
+      padding: 1rem;
+    }
+  
+    .details-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .company-logo {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .filter-toggle {
+      bottom: 1rem;
+      right: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Custom range slider thumb */
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #007bff;
+    border-radius: 50%;
+    cursor: pointer;
+  }

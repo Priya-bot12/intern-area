@@ -1,0 +1,49 @@
+.bt3{
+    color: white;
+    outline: #078edd 2px solid;
+    background-color: #078edd;
+    border: none;
+    width: 70px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 2px;
+}
+.button-container {
+  color: white;
+    outline: #078edd 2px solid;
+    background-color: #078edd;
+    border: none;
+    width: 70px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.btnlogin{
+  color: white;
+    outline: #078edd 2px solid;
+    background-color: #078edd;
+    border: none;
+    width: 70px;
+    height: 25px;
+    font-size: 16px;
+    border-radius: 2px;
+    
+    /* Centering */
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+.hide{
+    display: none;
+}
+  }
+@media only screen and (min-width: 768px) {
+.show{
+    display: none;
+}
+  }

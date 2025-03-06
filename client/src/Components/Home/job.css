@@ -1,0 +1,148 @@
+/* Base Styles */
+.job-section {
+    padding: 0 1rem;
+}
+
+.category-filter {
+    margin-bottom: 2rem;
+}
+
+.filter-label {
+    display: block;
+    color: #4a5568;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.category-buttons {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.75rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+}
+
+.category-btn {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    background-color: #f7fafc;
+    color: #4a5568;
+    border: 1px solid #e2e8f0;
+}
+
+.category-btn.active {
+    background-color: #4299e1;
+    color: white;
+    border-color: #4299e1;
+}
+
+.category-btn:hover {
+    background-color: #e2e8f0;
+}
+
+/* Job Listings */
+.job-listings {
+    position: relative;
+}
+
+.mobile-jobs {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.desktop-jobs-container {
+    overflow-x: hidden;
+    position: relative;
+}
+
+.desktop-jobs {
+    display: flex;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    scroll-behavior: smooth;
+}
+
+/* Scroll Controls */
+.scroll-controls {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.scroll-btn {
+    background-color: white;
+    border: 1px solid #cbd5e0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.2s ease;
+}
+
+
+
+/* Job Cards */
+.mobile-job-card,
+.desktop-job-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mobile-job-card {
+    width: 100%;
+}
+
+.desktop-job-card {
+    min-width: 300px;
+    flex: 0 0 calc(33.333% - 1rem);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-section {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    
+    .desktop-jobs {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .scroll-controls {
+        display: none;
+    }
+    
+    .mobile-job-card {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktop-jobs-container {
+        padding: 0 2rem;
+    }
+    
+    .desktop-jobs {
+        flex-wrap: nowrap;
+    }
+}
+
+/* No Jobs Message */
+.no-jobs {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+    color: #718096;
+}
+
