@@ -57,14 +57,5 @@ Ensure you have the following installed:
    npm start
    ```
 
-## Screenshots
-Attach relevant screenshots showcasing the features:
-1. **Homepage**
-2. **Chatbot interaction**
-3. **Forgot password page**
-4. **Login tracking details**
-5. **OTP verification process**
-6. **Responsive UI on different devices**
-
 
 
