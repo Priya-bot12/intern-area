@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword, signInWithPopup, updateProfile, fetchSignInMethodsForEmail } from "firebase/auth";
 import { doc, setDoc, getDocs, collection, query, where } from "firebase/firestore";
 import { auth, provider, db } from "../../firebase/firebase";
+import { UAParser } from 'ua-parser-js';
+import { isMobile } from "react-device-detect";
 import { useNavigate } from "react-router-dom";
 import "./register.css";
 import Swal from "sweetalert2";
@@ -23,6 +25,17 @@ function Register() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+   const checkMobileTime = () => {
+    const parser = new UAParser();
+    const device = parser.getDevice();
+    const isMobile = device.type === 'mobile' || device.type === 'tablet';
+    if (!isMobile) return true;
+
+    const now = new Date();
+    const hours = now.getHours();
+    return hours >= 10 && hours < 13;
+  };
+
   const checkEmailExists = async (email) => {
     const usersRef = collection(db, "users");
     const q = query(usersRef, where("email", "==", email));
@@ -31,6 +44,14 @@ function Register() {
   };
 
   const handleSignInWithGoogle = async () => {
+     if (!checkMobileTime()) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Mobile registration allowed only between 10 AM to 1 PM!",
+      });
+      return;
+    }
     setLoading(true);
     try {
       const res = await signInWithPopup(auth, provider);
@@ -65,6 +86,14 @@ function Register() {
 
   const handleRegister = async (e) => {
     e.preventDefault();
+    if (!checkMobileTime()) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Mobile registration allowed only between 10 AM to 1 PM!",
+      });
+      return;
+    }
     const { name, email, phone, password, confirmPassword } = formData;
 
     // Validation checks
