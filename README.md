@@ -30,7 +30,6 @@ Intern-Area is a job portal designed for users to apply for jobs and internships
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB
 - **Authentication:** Firebase
-- **Hosting:** [Your Hosting Provider]
 
 ## Setup Instructions
 ### Prerequisites
