@@ -139,7 +139,7 @@ function Login() {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "OTP verification failed!",
+        text: "OTP verification failed(Make sure you are entering the correct password)!",
       });
     }
     setLoading(false);
