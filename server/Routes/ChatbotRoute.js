@@ -149,28 +149,28 @@ function handleInternshipAndJobQuestions(question) {
     else if (lowerQuestion.includes('employee benefits') || lowerQuestion.includes('perks')) {
         return "Benefits include health insurance, paid time off, retirement plans, and wellness programs.";
     }
-    else if (lowerQuestion.includes('start date flexibility') || lowerQuestion.includes('joining date'))) {
+    else if (lowerQuestion.includes('start date flexibility') || lowerQuestion.includes('joining date')) {
         return "Start dates are typically fixed, but we can consider adjustments for exceptional circumstances.";
     }
-    else if (lowerQuestion.includes('leave policy') || lowerQuestion.includes('time off'))) {
+    else if (lowerQuestion.includes('leave policy') || lowerQuestion.includes('time off')) {
         return "We offer paid leaves, sick days, and holidays as per company policy and local regulations.";
     }
-    else if (lowerQuestion.includes('termination policy') || lowerQuestion.includes('exit process'))) {
+    else if (lowerQuestion.includes('termination policy') || lowerQuestion.includes('exit process')) {
         return "Separation processes follow contractual terms and include proper knowledge transfer.";
     }
-    else if (lowerQuestion.includes('alumni network') || lowerQuestion.includes('former employees'))) {
+    else if (lowerQuestion.includes('alumni network') || lowerQuestion.includes('former employees')) {
         return "We maintain an active alumni network for professional connections and opportunities.";
     }
-    else if (lowerQuestion.includes('nda') || lowerQuestion.includes('non-disclosure'))) {
+    else if (lowerQuestion.includes('nda') || lowerQuestion.includes('non-disclosure')) {
         return "All employees sign standard NDAs to protect company and client confidential information.";
     }
-    else if (lowerQuestion.includes('company ranking') || lowerQuestion.includes('industry position'))) {
+    else if (lowerQuestion.includes('company ranking') || lowerQuestion.includes('industry position')){
         return "We're consistently ranked among top employers in our sector for culture and innovation.";
     }
-    else if (lowerQuestion.includes('csr') || lowerQuestion.includes('social responsibility'))) {
+    else if (lowerQuestion.includes('csr') || lowerQuestion.includes('social responsibility')) {
         return "We run multiple CSR initiatives focused on education, environment, and community development.";
     }
-    else if (lowerQuestion.includes('handle rejection') || lowerQuestion.includes('application status'))) {
+    else if (lowerQuestion.includes('handle rejection') || lowerQuestion.includes('application status')) {
         return "Unsuccessful candidates receive feedback and are encouraged to apply for future roles.";
     }else if(lowerQuestion.includes('reference letter') || lowerQuestion.includes('letter of recommendation')){
         return "Reference letters are provided upon successful completion of internships based on performance.";
