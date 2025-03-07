@@ -41,7 +41,7 @@ Ensure you have the following installed:
 ### Installation
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/intern-area.git
+   git clone https://github.com/Priya-bot12/intern-area.git
    cd intern-area
    ```
 2. **Install dependencies:**
