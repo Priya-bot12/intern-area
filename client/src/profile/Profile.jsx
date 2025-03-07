@@ -437,26 +437,27 @@ function Profile() {
                             <ResumePreview basicInfo={basicInfo} resumeData={resumeData} />
                         </div>
 
-                        <div className="flex gap-4">
+                        <div className="flex flex-wrap gap-4 justify-center w-full">
                             <button
                                 onClick={() => setIsEditingResume(true)}
-                                className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 flex items-center"
+                                className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 flex items-center w-full sm:w-auto justify-center"
                             >
                                 <FiEdit className="mr-2" /> Edit Resume
                             </button>
                             <Link
                                 to="/userapplication"
-                                className="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-700"
+                                className="bg-blue-700 text-white px-6 py-2 rounded hover:bg-blue-800 w-full sm:w-auto text-center"
                             >
                                 View Applications
                             </Link>
                             <Link
                                 to="/login-history"
-                                className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-800"
+                                className="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-900 w-full sm:w-auto text-center"
                             >
                                 Login History
                             </Link>
                         </div>
+
                     </div>
                 )}
             </div>
