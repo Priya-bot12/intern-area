@@ -155,7 +155,7 @@ function Register() {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: "Registration failed. Please try again later!",
+        text: "Registration failed. Please try again later (May be email is already registered)!",
       });
     } finally {
       setLoading(false);
