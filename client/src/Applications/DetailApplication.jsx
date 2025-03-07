@@ -125,17 +125,25 @@ function DetailApplication() {
               <div className="flex flex-col gap-3">
                 
                 {/* Profile Resume */}
-                <PDFDownloadLink
-                  document={<ResumePDF basicInfo={data.user} resumeData={resumeData} />}
-                  fileName="profile_resume.pdf"
-                >
-                  {({ loading }) => (
-                    <button className="w-full md:w-auto px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-500 transition-colors">
-                      {loading ? "Generating..." : "Download Profile Resume"}
+              {resumeData ? (
+                    <PDFDownloadLink
+                      document={<ResumePDF basicInfo={data.user} resumeData={resumeData} />}
+                      fileName="profile_resume.pdf"
+                    >
+                      {({ loading }) => (
+                        <button className="w-full md:w-auto px-4 py-2 bg-blue-400 text-white rounded-md hover:bg-blue-500 transition-colors">
+                          {loading ? "Generating..." : "Download Profile Resume"}
+                        </button>
+                      )}
+                    </PDFDownloadLink>
+                  ) : (
+                    <button 
+                      disabled 
+                      className="w-full md:w-auto px-4 py-2 bg-gray-300 text-white rounded-md cursor-not-allowed"
+                    >
+                      Loading Resume Data...
                     </button>
-                  )}
-                  
-                </PDFDownloadLink>
+                )}
 
                 {/* Uploaded Resume */}
                 {data.resumePath ? (
