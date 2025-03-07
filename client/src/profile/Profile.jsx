@@ -292,10 +292,11 @@ function Profile() {
                                 </div>
                             ) : (
                                 <>
-                                    <h1 className="text-3xl font-bold text-gray-800">{basicInfo.fullName}</h1>
-                                    <p className="text-gray-600"><span className="font-medium">Email:</span> {basicInfo.email}</p>
-                                    <p className="text-gray-600"><span className="font-medium">Phone:</span> {basicInfo.phoneNumber}</p>
-                                    <p className="text-gray-600"><span className="font-medium">Location:</span> {basicInfo.location}</p>
+                                    <h1 className="text-xl sm:text-3xl font-bold text-gray-800">{basicInfo.fullName}</h1>
+                                    <p className="text-sm sm:text-base text-gray-600"><span className="font-medium">Email:</span> {basicInfo.email}</p>
+                                    <p className="text-sm sm:text-base text-gray-600"><span className="font-medium">Phone:</span> {basicInfo.phoneNumber}</p>
+                                    <p className="text-sm sm:text-base text-gray-600"><span className="font-medium">Location:</span> {basicInfo.location}</p>
+
                                 </>
                             )}
                         </div>
